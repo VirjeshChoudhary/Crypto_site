@@ -42,7 +42,7 @@ const Coins = () => {
     if(error){
         return  <ErrorComponent message={"Error While Fetching coins"} />;
     }
-
+//badiya h
     return (
         <div className='flex flex-wrap w-[100%] justify-center '>
             {

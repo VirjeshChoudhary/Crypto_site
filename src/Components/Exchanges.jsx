@@ -12,6 +12,7 @@ const Exchanges = () => {
         const fetchExcahnges = async () => {
             try {
                 const { data } = await axios.get(`${server}/exchanges?per_page=100`)
+                console.log(data);
                 setExchanges(data);
                 setLoading(false);
             } catch (error) {
@@ -44,10 +45,10 @@ const Exchanges = () => {
 const ExchangeCard = ({ name, img, rank, url }) => (
     <div className='m-5 hover:transition-all duration-[300ms] hover:scale-110 h-[100px] w-[100px] '>
         <a href={url} target='blank' >
-            <img src={img} alt="" className='h-[100%] w-100% ' />
+            <img src={img} alt="image didn't fetch by api " className='h-[100%] w-100% ' />
             <div className=' flex text' >
                 <div className=' text-medium ml-1 ' >{rank}.</div>
-                <div className=' ml-2 line-clamp-1  ' >{name}</div>
+                <div className=' ml-2 line-clamp-1 font-medium ' >{name}</div>
             </div>
         </a>
     </div>
