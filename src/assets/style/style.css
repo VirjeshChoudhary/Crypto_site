@@ -1,0 +1,10 @@
+.bit{
+    animation: imgup 1s linear infinite alternate;
+  }
+  @keyframes imgup{
+    to{
+        transform: translateY(-10px);
+    }
+    
+    
+  }
